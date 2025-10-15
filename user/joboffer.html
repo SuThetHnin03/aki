@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Freelance Creative Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #272c49;
+  --secondary-color: #ff6900;
+  --text-color: #d0d3d4;
+  --button-text-color: #2e2e2e;
+  --primary-font: "Marcellus", serif;
+  --secondary-font: "Montserrat Alternates", sans-serif;
+  --text-font: "DM Sans", sans-serif;
+  --dark-bg: #1a1d2e;
+  --darker-bg: #0f1117;
+  --card-bg: #1f2437;
+  --accent-light: #ff8533;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--text-font);
+  background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.emoji-float {
+  font-size: 4rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-title {
+  font-family: var(--primary-font);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.cta-button {
+  background: var(--secondary-color);
+  color: var(--button-text-color);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 105, 0, 0.3);
+}
+
+.cta-button:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 0, 0.4);
+}
+
+/* Info Card */
+.info-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 3rem 0;
+  text-align: center;
+  border: 1px solid rgba(255, 105, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 105, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Openings Section */
+.openings-section {
+  margin: 4rem 0;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: var(--primary-font);
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.openings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.opening-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 105, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.opening-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.opening-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.opening-card:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.opening-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 15px 40px rgba(255, 105, 0, 0.3);
+}
+
+.opening-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.opening-icon {
+  font-size: 2.5rem;
+}
+
+.opening-title {
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.opening-tasks {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+.opening-tasks li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-color);
+}
+
+.opening-tasks li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.apply-button {
+  width: 100%;
+  background: transparent;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.875rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.apply-button:hover {
+  background: var(--secondary-color);
+  color: var(--button-text-color);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 105, 0, 0.1);
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  margin: 10% auto;
+  padding: 3rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.4s ease;
+}
+
+.close-button {
+  color: var(--text-color);
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--secondary-color);
+}
+
+.modal-title {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.modal-cta {
+  background: var(--secondary-color);
+  color: var(--button-text-color);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-cta:hover {
+  background: var(--accent-light);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .info-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .openings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .emoji-float {
+    font-size: 3rem;
+  }
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="emoji-float">🎉</div>
+            <h1 class="hero-title">Join Our Freelance Creative Team</h1>
+            <p class="hero-description">
+                We're building a network of talented designers, content creators, and video editors 
+                to work on client projects with us. If you're passionate about creating high-quality 
+                digital content and want flexible freelance work—you're welcome here.
+            </p>
+            <button class="cta-button" onclick="scrollToOpenings()">View Openings</button>
+        </header>
+
+
+
+        <!-- Current Openings Section -->
+        <section class="openings-section" id="openings">
+            <div class="section-header">
+                <div class="emoji-float">🔍</div>
+                <h2 class="section-title">Current Openings</h2>
+            </div>
+            
+            <div class="openings-grid">
+                <!-- Graphic Designer -->
+                <div class="opening-card" data-role="designer">
+                    <div class="opening-header">
+                        <span class="opening-icon">🎨</span>
+                        <h3 class="opening-title">Graphic Designer</h3>
+                    </div>
+                    <ul class="opening-tasks">
+                        <li>Social media posts</li>
+                        <li>Branding kits</li>
+                        <li>Thumbnails</li>
+                    </ul>
+                    <button class="apply-button" onclick="applyForRole('Graphic Designer')">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Content Writer -->
+                <div class="opening-card" data-role="writer">
+                    <div class="opening-header">
+                        <span class="opening-icon">✍️</span>
+                        <h3 class="opening-title">Content Writer / Caption Creator</h3>
+                    </div>
+                    <ul class="opening-tasks">
+                        <li>Social captions</li>
+                        <li>Ad copy</li>
+                        <li>Script writing</li>
+                    </ul>
+                    <button class="apply-button" onclick="applyForRole('Content Writer')">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Video Editor -->
+                <div class="opening-card" data-role="editor">
+                    <div class="opening-header">
+                        <span class="opening-icon">🎬</span>
+                        <h3 class="opening-title">Video Editor</h3>
+                    </div>
+                    <ul class="opening-tasks">
+                        <li>Short-form videos</li>
+                        <li>Reels</li>
+                        <li>YouTube edits</li>
+                        <li>Promos</li>
+                    </ul>
+                    <button class="apply-button" onclick="applyForRole('Video Editor')">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+                <!-- Work With Us Section -->
+        <section class="info-card">
+            <div class="card-icon">💼</div>
+            <h2 class="card-title">Work With Us</h2>
+            <p class="card-description">
+                We match freelancers with paid projects based on their skills, style, and availability. 
+                No bidding, no endless proposals—just real work with clear expectations and fair rates.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Ready to join our creative network? Apply to any position above.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for Application -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Apply for <span id="roleTitle"></span></h2>
+            <p class="modal-description">We'll be in touch soon to discuss opportunities!</p>
+            <button class="modal-cta" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll to openings section
+function scrollToOpenings() {
+  const openingsSection = document.getElementById("openings")
+  openingsSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  })
+}
+
+// Apply for role - show modal
+function applyForRole(role) {
+  const modal = document.getElementById("applicationModal")
+  const roleTitle = document.getElementById("roleTitle")
+
+  roleTitle.textContent = role
+  modal.style.display = "block"
+
+  // Add animation class
+  const modalContent = modal.querySelector(".modal-content")
+  modalContent.style.animation = "none"
+  setTimeout(() => {
+    modalContent.style.animation = "slideIn 0.4s ease"
+  }, 10)
+}
+
+// Close modal
+function closeModal() {
+  const modal = document.getElementById("applicationModal")
+  modal.style.display = "none"
+}
+
+// Close modal when clicking outside
+window.onclick = (event) => {
+  const modal = document.getElementById("applicationModal")
+  if (event.target === modal) {
+    closeModal()
+  }
+}
+
+// Add parallax effect to emoji floats
+document.addEventListener("mousemove", (e) => {
+  const emojiFloats = document.querySelectorAll(".emoji-float")
+  const mouseX = e.clientX / window.innerWidth
+  const mouseY = e.clientY / window.innerHeight
+
+  emojiFloats.forEach((emoji, index) => {
+    const speed = (index + 1) * 10
+    const x = (mouseX - 0.5) * speed
+    const y = (mouseY - 0.5) * speed
+
+    emoji.style.transform = `translate(${x}px, ${y}px)`
+  })
+})
+
+// Add intersection observer for scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1"
+      entry.target.style.transform = "translateY(0)"
+    }
+  })
+}, observerOptions)
+
+// Observe all cards
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".opening-card, .info-card")
+  cards.forEach((card) => observer.observe(card))
+})
+
+    </script>
+</body>
+</html>
